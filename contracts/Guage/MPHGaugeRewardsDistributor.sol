@@ -152,7 +152,7 @@ contract MPHGaugeRewardsDistributor is Owned, ReentrancyGuard {
             ERC20(reward_token_address).approve(gauge_address, reward_tally);
 
             // Trigger the middleman
-            FraxMiddlemanGauge(gauge_address).pullAndBridge(reward_tally);
+            MPHMiddlemanGauge(gauge_address).pullAndBridge(reward_tally);
         }
         else {
             // Mainnet: Pay out the rewards directly to the gauge

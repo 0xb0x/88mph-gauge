@@ -1,6 +1,6 @@
 #!/bin/bash
 if [$1 == 'mainnet']; then
-    echo "Cannot deploy MPHCrossChainRewarder to $1"
+    echo "Cannot deploy MPHCrossChainRewarder to Mainnet"
 else 
     node scripts/generate_new_wallet.js
 

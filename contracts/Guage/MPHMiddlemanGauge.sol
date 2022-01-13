@@ -36,7 +36,7 @@ import '../Uniswap/TransferHelper.sol';
 import "../Staking/Owned.sol";
 import "../Utils/ReentrancyGuard.sol";
 
-contract FraxMiddlemanGauge is Owned, ReentrancyGuard {
+contract MPHMiddlemanGauge is Owned, ReentrancyGuard {
     using SafeMath for uint256;
     using SafeERC20 for ERC20;
 
