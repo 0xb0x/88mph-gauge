@@ -29,7 +29,7 @@ import "../ERC20/ERC20.sol";
 import "../ERC20/SafeERC20.sol";
 import "./IMPHGaugeController.sol";
 import "./MPHMiddlemanGauge.sol";
-import '../Uniswap/TransferHelper.sol';
+import "../Uniswap/TransferHelper.sol";
 import "../Staking/Owned.sol";
 import "../Utils/ReentrancyGuard.sol";
 

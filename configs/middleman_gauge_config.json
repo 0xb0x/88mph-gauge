@@ -1,10 +1,10 @@
 {
     "1" : {
+        "name" : "",
         "owner" : "",
         "bridgeAddress" : "",
         "bridgeType": 1,
         "destinationAddress": "",
         "nonEVMDestination" : "",
-        "name" : ""
     }
 }
