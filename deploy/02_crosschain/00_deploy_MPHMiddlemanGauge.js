@@ -10,8 +10,9 @@ module.exports = async ({ deployments, getNamedAccounts, getChainId}) => {
 
   const rewardsDistributor =  await deployments.get('MPHGaugeRewardsDistributor');
   
-  const deployResult = await deploy("MPHMiddlemanGuage", {
+  const deployResult = await deploy(gaugeConfig.name, {
     from: deployer,
+    contract: "MPHMiddlemanGauge",
     log: true,
     args: [
         gaugeConfig.owner, 
@@ -33,5 +34,5 @@ module.exports = async ({ deployments, getNamedAccounts, getChainId}) => {
   
 };
 
-module.exports.tags = ["MPHMiddlemanGuage"];
-module.exports.dependencies = [];
+module.exports.tags = [gaugeConfig.name, "MPHMiddlemanGuage"];
+module.exports.dependencies = ['MPHGaugeRewardsDistributor'];

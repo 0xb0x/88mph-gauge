@@ -8,7 +8,7 @@ module.exports = async ({ deployments, getNamedAccounts, getChainId}) => {
 
   const mphGaugeController =  await deployments.get('MPHGaugeController');
   
-  const deployResult = await deploy("MPHGaugeRewardsDistributor", {
+  const deployResult = await deploy('MPHGaugeRewardsDistributor', {
     from: deployer,
     log: true,
     args: [config.owner, config.timelock, config.curator, config.mphToken, mphGaugeController.address ],
@@ -22,5 +22,5 @@ module.exports = async ({ deployments, getNamedAccounts, getChainId}) => {
   
 };
 
-module.exports.tags = ["MPHGaugeRewardsDistributor"];
-module.exports.dependencies = [];
+module.exports.tags = ['MPHGaugeRewardsDistributor'];
+module.exports.dependencies = ['MPHGaugeController'];

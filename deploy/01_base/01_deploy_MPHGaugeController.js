@@ -22,4 +22,4 @@ module.exports = async ({ deployments, getNamedAccounts, getChainId}) => {
   }
 };
 module.exports.tags = ["MPHGaugeController"];
-module.exports.dependencies = [];
+module.exports.dependencies = ["veMPH"];
